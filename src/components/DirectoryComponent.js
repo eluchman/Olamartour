@@ -15,7 +15,7 @@ class Directory extends Component {
                 },
                 {
                   id: 1,
-                  name: 'Spain ',
+                  name: 'España ',
                   image: 'assets/images/spain1.jpg',
                   elevation: 877,
                   description: "Explore toda la magia que Orlando tiene para ofrecer, desde Disney World hasta Universal Studios!."
@@ -47,7 +47,29 @@ class Directory extends Component {
                     image: 'assets/images/brazil.jpg',
                     elevation: 42,
                     description: "Las arenas blancas del Caribe te están llamando, Cuba, República Dominicana y Jamaica."
-                }
+                },
+                {
+                    id: 6,
+                    name: 'Miami',
+                    image: 'assets/images/miami.jpg',
+                    elevation: 42,
+                    description: "Las arenas blancas del Caribe te están llamando, Cuba, República Dominicana y Jamaica."
+                },
+                {
+                    id: 7,
+                    name: 'Chile',
+                    image: 'assets/images/chile.jpg',
+                    elevation: 42,
+                    description: "Las arenas blancas del Caribe te están llamando, Cuba, República Dominicana y Jamaica."
+                },
+                {
+                    id: 8,
+                    name: 'Peru',
+                    image: 'assets/images/brazil.jpg',
+                    elevation: 42,
+                    description: "Las arenas blancas del Caribe te están llamando, Cuba, República Dominicana y Jamaica."
+                },
+                
             ],
         };
         
@@ -56,7 +78,7 @@ class Directory extends Component {
     render() {
         const directory = this.state.destinations.map(destination => {
             return (
-                <div className="col">
+                <div key={destination.id} className="col">
                     <img src={destination.image} alt={destination.name} />
                     <h2>{destination.name}</h2>
                     <p>{destination.description}</p>
